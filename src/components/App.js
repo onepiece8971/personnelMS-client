@@ -1,15 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { hot } from 'react-hot-loader'
-import Login from './Login'
+import AppRouter from './Router'
 
-class App extends Component {
-  render () {
-    return (
-      <div>
-        <Login />
-      </div>
-    )
-  }
-}
+const App = () => (
+  <AppRouter />
+);
 
 export default hot(module)(App)
