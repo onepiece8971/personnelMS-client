@@ -1,9 +1,9 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from './Login'
 
 const AppRouter = () => (
-  <Router history={history}>
+  <Router>
     <Route path="/" component={Login}/>
   </Router>
 )
