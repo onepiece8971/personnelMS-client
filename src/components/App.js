@@ -1,9 +1,15 @@
 import React from 'react'
+import configureStore from 'src/store/configureStore'
+import { Provider } from 'react-redux'
 import { hot } from 'react-hot-loader'
-import AppRouter from './Router'
+import AppRouter from 'src/routers/AppRouter'
+
+let store = configureStore()
 
 const App = () => (
-  <AppRouter />
-);
+  <Provider store={store}>
+    <AppRouter/>
+  </Provider>
+)
 
-export default hot(module)(App)
+export default process.env.NODE_ENV === 'development' ? hot(module)(App) : App
