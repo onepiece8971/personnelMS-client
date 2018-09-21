@@ -1,11 +1,9 @@
-import { handleAction } from 'redux-actions';
+import {combineReducers} from 'redux';
+import users from './users';
 
-const todoApp = handleAction(
-  'TEST',
-  (state, action) => ({
-    todo: state.todo + 1
-  }),
-  {todo: 0}
-);
+//使用redux的combineReducers方法将所有reducer打包起来
+const rootReducer = combineReducers({
+  users,
+});
 
-export default todoApp;
+export default rootReducer;
