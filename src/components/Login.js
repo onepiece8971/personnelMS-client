@@ -6,7 +6,7 @@ const Login = ({users, getUser}) => (
   <div>
     <Row>
       <Col span={24} className="center">
-        <p>{users[1].name}</p>
+        <p>{users[1] ? users[1].name : 'button'}</p>
         <Button type="primary" onClick={getUser}>Button</Button>
       </Col>
     </Row>
